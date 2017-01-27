@@ -201,6 +201,18 @@
                                 <goal>checkstyle</goal>
                             </goals>
                         </execution>
+                        <execution>
+                            <id>check-style-client-javadoc</id>
+                            <phase>compile</phase>
+                            <goals>
+                                <goal>checkstyle</goal>
+                            </goals>
+                            <configuration>
+                                <configLocation>elytron-client-checkstyle.xml</configLocation>
+                                <includes>org/wildfly/security/auth/client/**\/*.java</includes>
+                                <includeTestSourceDirectory>false</includeTestSourceDirectory>
+                            </configuration>
+                        </execution>
                     </executions>
                 </plugin>
                 <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
